@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211034729) do
+ActiveRecord::Schema.define(:version => 20120414213114) do
 
   create_table "gym_workouts", :force => true do |t|
     t.integer  "gym_id"
@@ -29,12 +29,20 @@ ActiveRecord::Schema.define(:version => 20120211034729) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "roles", :force => true do |t|
+    t.string   "name",        :null => false
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "role_id"
   end
 
   create_table "workouts", :force => true do |t|
