@@ -1,0 +1,209 @@
+/* line 3, ../../../app/assets/stylesheets/scss/application.sass */
+body {
+  background-color: #e6e6e6;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  padding: 10px 0 50px 0;
+}
+
+/* line 9, ../../../app/assets/stylesheets/scss/application.sass */
+a {
+  color: blue;
+}
+/* line 11, ../../../app/assets/stylesheets/scss/application.sass */
+a img {
+  border: none;
+}
+
+/* line 14, ../../../app/assets/stylesheets/scss/application.sass */
+form {
+  padding: 20px 30px 20px 30px;
+  background-color: #d9d9d9;
+  border: 1px solid silver;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 15, ../../../app/assets/stylesheets/scss/application.sass */
+form h2 {
+  color: #333333;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 100;
+}
+/* line 26, ../../../app/assets/stylesheets/scss/application.sass */
+form input, form textarea {
+  border: 1px solid silver;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px -1px 0px #999999;
+  -webkit-box-shadow: 0px -1px 0px #999999;
+  -o-box-shadow: 0px -1px 0px #999999;
+  box-shadow: 0px -1px 0px #999999;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  font-size: 12px;
+  height: 36px;
+  line-height: 140%;
+  margin: 0 0 20px 0;
+  padding: 0 10px;
+  -webkit-transition: all, 100ms ease-out;
+  -moz-transition: all, 100ms ease-out;
+  -o-transition: all, 100ms ease-out;
+  transition: all, 100ms ease-out;
+  width: 100%;
+}
+/* line 49, ../../../app/assets/stylesheets/scss/application.sass */
+form textarea {
+  padding: 10px;
+  min-height: 150px;
+}
+/* line 52, ../../../app/assets/stylesheets/scss/application.sass */
+form input[type="submit"] {
+  border: 1px solid #666666;
+  background-color: white;
+  width: 150px;
+}
+/* line 56, ../../../app/assets/stylesheets/scss/application.sass */
+form button {
+  font-size: 18px;
+  background: #e73a40;
+  background: -moz-linear-gradient(top, #e73a40, #da0f16);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e73a40), color-stop(1, #da0f16));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #e73a40, #da0f16);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(top, #e73a40, #da0f16);
+  border: 1px solid #cc0e14;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 1px 0 0 #e98083;
+  -webkit-box-shadow: inset 0 1px 0 0 #e98083;
+  -o-box-shadow: inset 0 1px 0 0 #e98083;
+  box-shadow: inset 0 1px 0 0 #e98083;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #bf070d;
+  width: 200px;
+  font-weight: normal;
+  line-height: 100%;
+  padding: 10px 6px 10px 6px;
+  text-transform: uppercase;
+  font-family: "pill-gothic-600mg-1", "pill-gothic-600mg-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 83, ../../../app/assets/stylesheets/scss/application.sass */
+form button:hover {
+  background: #df282e;
+  background: -moz-linear-gradient(top, #df282e, #cb0f15);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #df282e), color-stop(1, #cb0f15));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #df282e, #cb0f15);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: linear-gradient(top, #df282e, #cb0f15);
+  -moz-box-shadow: inset 0 1px 0 0 #e3585c;
+  -webkit-box-shadow: inset 0 1px 0 0 #e3585c;
+  -o-box-shadow: inset 0 1px 0 0 #e3585c;
+  box-shadow: inset 0 1px 0 0 #e3585c;
+  cursor: pointer;
+}
+/* line 96, ../../../app/assets/stylesheets/scss/application.sass */
+form button:active {
+  -moz-box-shadow: "inset 0 0 8px 4px #bb0f15, inset 0 0 8px 4px #bb0f15, 0 1px 1px 0 #eeeeee";
+  -webkit-box-shadow: "inset 0 0 8px 4px #bb0f15, inset 0 0 8px 4px #bb0f15, 0 1px 1px 0 #eeeeee";
+  -o-box-shadow: "inset 0 0 8px 4px #bb0f15, inset 0 0 8px 4px #bb0f15, 0 1px 1px 0 #eeeeee";
+  box-shadow: "inset 0 0 8px 4px #bb0f15, inset 0 0 8px 4px #bb0f15, 0 1px 1px 0 #eeeeee";
+  border: 1px solid #cc0e14;
+}
+
+/* line 103, ../../../app/assets/stylesheets/scss/application.sass */
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 108, ../../../app/assets/stylesheets/scss/application.sass */
+#header {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 500px;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  text-align: right;
+  font-size: 2em;
+  font-weight: 100;
+  text-shadow: 0 1px 1px white;
+  color: #666666;
+}
+/* line 118, ../../../app/assets/stylesheets/scss/application.sass */
+#header span:hover {
+  color: #e73a40;
+}
+
+/* line 121, ../../../app/assets/stylesheets/scss/application.sass */
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* line 125, ../../../app/assets/stylesheets/scss/application.sass */
+#flash_notice,
+#flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+/* line 130, ../../../app/assets/stylesheets/scss/application.sass */
+#flash_notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66;
+}
+
+/* line 134, ../../../app/assets/stylesheets/scss/application.sass */
+#flash_error {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666;
+}
+
+/* line 138, ../../../app/assets/stylesheets/scss/application.sass */
+.fieldWithErrors {
+  display: inline;
+}
+
+/* line 141, ../../../app/assets/stylesheets/scss/application.sass */
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 148, ../../../app/assets/stylesheets/scss/application.sass */
+#errorExplanation h2 {
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #cc0000;
+  color: white;
+}
+/* line 156, ../../../app/assets/stylesheets/scss/application.sass */
+#errorExplanation p {
+  color: #333333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+/* line 160, ../../../app/assets/stylesheets/scss/application.sass */
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+/* line 162, ../../../app/assets/stylesheets/scss/application.sass */
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}

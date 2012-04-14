@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @gym.name
+%p
+  %b Description:
+  = @gym.description
+%p
+  %b Url:
+  = @gym.url
+%p
+  %b Rss url:
+  = @gym.rss_url
+
+= link_to 'Edit', edit_gym_path(@gym)
+\|
+= link_to 'Back', gyms_path

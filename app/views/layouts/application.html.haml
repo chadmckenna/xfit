@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title xfit
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tag
+  %body
+    #header
+      %span xfit
+    #container
+      - if notice
+        #flash_notice= notice
+      = yield

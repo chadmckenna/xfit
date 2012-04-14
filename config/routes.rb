@@ -1,4 +1,19 @@
 Xfit::Application.routes.draw do
+  resources :gyms
+
+  resources :gym_workouts
+
+  resources :workouts
+
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#create", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  
+  resources :users
+  resources :sessions
+  
+  root :to => "users#new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,19 @@
+%h1 Listing gym_workouts
+
+%table
+  %tr
+    %th Workout
+    %th
+    %th
+    %th
+
+  - @gym_workouts.each do |gym_workout|
+    %tr
+      %td= gym_workout.workout
+      %td= link_to 'Show', gym_workout
+      %td= link_to 'Edit', edit_gym_workout_path(gym_workout)
+      %td= link_to 'Destroy', gym_workout, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Gym workout', new_gym_workout_path
