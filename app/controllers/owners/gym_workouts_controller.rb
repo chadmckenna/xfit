@@ -2,8 +2,8 @@ class Owners::GymWorkoutsController < Owners::OwnersController
   # GET /gym_workouts
   # GET /gym_workouts.json
   def index
-    @gym_workouts = GymWorkout.all
-
+    @gym_workouts = GymWorkout.find_all_by_gym_id(current_user.gym.id)
+        
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @gym_workouts }
@@ -41,11 +41,12 @@ class Owners::GymWorkoutsController < Owners::OwnersController
   # POST /gym_workouts.json
   def create
     @gym_workout = GymWorkout.new(params[:gym_workout])
+    @gym_workout.gym_id = current_user.gym.id
 
     respond_to do |format|
       if @gym_workout.save
-        format.html { redirect_to @gym_workout, :notice => 'Gym workout was successfully created.' }
-        format.json { render :json => @gym_workout, :status => :created, :location => @gym_workout }
+        format.html { redirect_to owners_gym_workouts_path, :notice => 'Gym workout was successfully created.' }
+        #format.json { render :json => @gym_workout, :status => :created, :location => @gym_workout }
       else
         format.html { render :action => "new" }
         format.json { render :json => @gym_workout.errors, :status => :unprocessable_entity }
@@ -76,7 +77,7 @@ class Owners::GymWorkoutsController < Owners::OwnersController
     @gym_workout.destroy
 
     respond_to do |format|
-      format.html { redirect_to gym_workouts_url }
+      format.html { redirect_to owners_gym_workouts_path }
       format.json { head :no_content }
     end
   end

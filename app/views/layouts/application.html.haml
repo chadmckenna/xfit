@@ -8,6 +8,13 @@
   %body
     #header
       %span xfit
+    - if current_user
+      #nav
+        .right
+          = link_to 'Logout', logout_path
+        .left
+          = nav current_user
+      .clear		
     #container
       - if notice
         #flash_notice= notice

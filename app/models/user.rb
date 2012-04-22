@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   
   has_many :workouts
+  has_one :gym
   belongs_to :role
+  belongs_to :gym
   
   attr_accessible :email, :password, :password_confirmation, :role_id
   

@@ -1,0 +1,11 @@
+%ul
+  %li
+    = link_to 'Home', owners_root_path
+  - if current_user.gym
+    %li
+      = link_to 'My Gym', edit_owners_gym_path(current_user.gym)
+    %li
+      = link_to 'Create Workout', new_owners_gym_workout_path
+  - else
+    %li
+      = link_to 'Create Gym', new_owners_gym_path 

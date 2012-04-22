@@ -8,6 +8,14 @@ a {
   color: blue; }
   a img {
     border: none; }
+	
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
 
 form {
   padding: 20px 30px 20px 30px;
@@ -114,10 +122,26 @@ form {
   color: #666666; }
   #header span:hover {
     color: #e73a40; }
+	
+#nav {
+	margin: 0 auto;
+	width: 500px;
+}
+  #nav ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+    #nav ul li {
+      display: inline;
+      padding: 0 3px;
+      list-style-type: none;
+    }
 
 #container {
   width: 500px;
-  margin: 0 auto; }
+  margin: 10px auto;
+}
 
 #flash_notice,
 #flash_error {

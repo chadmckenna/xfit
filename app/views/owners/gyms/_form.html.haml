@@ -1,4 +1,4 @@
-= form_for @gym do |f|
+= form_for [:owners, @gym] do |f|
   -if @gym.errors.any?
     #error_explanation
       %h2= "#{pluralize(@gym.errors.count, "error")} prohibited this gym from being saved:"
@@ -19,4 +19,4 @@
     = f.label :rss_url
     = f.text_field :rss_url
   .actions
-    = f.submit 'Save'
+    %button Save

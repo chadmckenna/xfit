@@ -41,14 +41,20 @@ class Owners::GymsController < Owners::OwnersController
   # POST /gyms.json
   def create
     @gym = Gym.new(params[:gym])
+    @gym.user_id = current_user.id
 
     respond_to do |format|
       if @gym.save
-        format.html { redirect_to @gym, :notice => 'Gym was successfully created.' }
-        format.json { render :json => @gym, :status => :created, :location => @gym }
+        current_user.gym_id = @gym.id
+        if current_user.save
+          format.html { redirect_to edit_owners_gym_path(@gym), :notice => 'Gym was successfully created.' }
+          #format.json { render :json => @gym, :status => :created, :location => @gym }
+        else
+          format.html { redirect_to owners_root_path, :notice => 'Something went horribly wrong. Try again.' }
+        end
       else
         format.html { render :action => "new" }
-        format.json { render :json => @gym.errors, :status => :unprocessable_entity }
+        #format.json { render :json => @gym.errors, :status => :unprocessable_entity }
       end
     end
   end

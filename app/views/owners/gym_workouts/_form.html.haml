@@ -1,4 +1,4 @@
-= form_for @gym_workout do |f|
+= form_for [:owners, @gym_workout] do |f|
   -if @gym_workout.errors.any?
     #error_explanation
       %h2= "#{pluralize(@gym_workout.errors.count, "error")} prohibited this gym_workout from being saved:"
@@ -8,6 +8,6 @@
 
   .field
     = f.label :workout
-    = f.text_field :workout
+    = f.text_area :workout
   .actions
-    = f.submit 'Save'
+    %button Save

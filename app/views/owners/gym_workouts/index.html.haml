@@ -1,4 +1,6 @@
-%h1 Listing gym_workouts
+%h1 Your gym workouts
+
+= link_to 'New Gym workout', new_owners_gym_workout_path
 
 %table
   %tr
@@ -10,10 +12,8 @@
   - @gym_workouts.each do |gym_workout|
     %tr
       %td= gym_workout.workout
-      %td= link_to 'Show', gym_workout
-      %td= link_to 'Edit', edit_gym_workout_path(gym_workout)
-      %td= link_to 'Destroy', gym_workout, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Show', owners_gym_workout_path(gym_workout)
+      %td= link_to 'Edit', edit_owners_gym_workout_path(gym_workout)
+      %td= link_to 'Destroy', owners_gym_workout_path(gym_workout), :confirm => 'Are you sure?', :method => :delete
 
 %br
-
-= link_to 'New Gym workout', new_gym_workout_path
